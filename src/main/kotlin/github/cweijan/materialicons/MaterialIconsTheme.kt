@@ -50,9 +50,7 @@ internal data class MaterialIconsTheme(
             if (!node.isObject) {
                 return result
             }
-            val fields = node.fields()
-            while (fields.hasNext()) {
-                val entry = fields.next()
+            for (entry in node.properties()) {
                 val iconPath = entry.value.path("iconPath").asText()
                 result[entry.key] = normalizeIconPath(iconPath)
             }
@@ -64,9 +62,7 @@ internal data class MaterialIconsTheme(
             if (!node.isObject) {
                 return result
             }
-            val fields = node.fields()
-            while (fields.hasNext()) {
-                val entry = fields.next()
+            for (entry in node.properties()) {
                 result[entry.key.lowercase()] = entry.value.asText()
             }
             return result

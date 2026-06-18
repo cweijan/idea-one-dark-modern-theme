@@ -31,7 +31,7 @@ internal object ColorToolWindowIconPatcherInstaller {
             for (bean in ToolWindowEP.EP_NAME.extensionList) {
                 val toolWindow = manager.getToolWindow(bean.id) ?: continue
                 val iconPath = bean.icon ?: continue
-                val icon = IconLoader.findIcon(iconPath, bean.pluginDescriptor.classLoader) ?: continue
+                val icon = IconLoader.findIcon(iconPath, bean.pluginDescriptor.pluginClassLoader!!) ?: continue
                 toolWindow.setIcon(icon)
             }
         }
