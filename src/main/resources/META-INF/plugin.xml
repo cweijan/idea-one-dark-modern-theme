@@ -1,6 +1,6 @@
 <idea-plugin>
      <id>github.cweijan.material-icons</id>
-     <name>Material-icons</name>
+     <name>Material Icons</name>
      <vendor url="https://github.com/cweijan">cweijan</vendor>
 
      <description>
