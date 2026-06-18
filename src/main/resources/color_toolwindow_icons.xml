@@ -100,4 +100,20 @@
     <replacePath path="/icons/expui/toolwindows/toolWindowDebugger.svg" />
     <replacePath path="/icons/expui/toolwindows/toolWindowDebugger@20x20.svg" />
   </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_toolWindowServices_newui@20x20.svg">
+    <replacePath path="/toolwindows/toolWindowServices.svg" />
+    <replacePath path="/icons/expui/toolwindows/services.svg" />
+    <replacePath path="/icons/expui/toolwindows/services@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowServices.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowServices@20x20.svg" />
+  </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_toolWindowKubernetes@20x20.svg">
+    <replacePath path="/toolwindows/toolWindowKubernetes.svg" />
+    <replacePath path="/icons/expui/toolwindows/kubernetes.svg" />
+    <replacePath path="/icons/expui/toolwindows/kubernetes@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowKubernetes.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowKubernetes@20x20.svg" />
+  </iconReplacement>
 </root>
