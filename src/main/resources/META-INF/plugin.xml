@@ -24,6 +24,8 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
+        <iconProvider implementation="github.cweijan.materialicons.MaterialIconProvider" order="first"/>
         <fileIconProvider implementation="github.cweijan.materialicons.MaterialFileIconProvider" order="first"/>
+        <projectViewNodeDecorator implementation="github.cweijan.materialicons.MaterialProjectViewDecorator" order="last"/>
     </extensions>
 </idea-plugin>

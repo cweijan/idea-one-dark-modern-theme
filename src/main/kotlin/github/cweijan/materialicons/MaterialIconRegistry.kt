@@ -1,6 +1,9 @@
 package github.cweijan.materialicons
 
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.roots.ProjectRootManager
 import com.intellij.openapi.util.IconLoader
+import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.util.IconUtil
 import com.intellij.util.ui.JBUI
 import com.intellij.util.ui.UIUtil
@@ -12,6 +15,18 @@ internal object MaterialIconRegistry {
     private val iconCache = mutableMapOf<String, Icon>()
 
     private const val TREE_ICON_SIZE = 16
+
+    fun getVirtualFileIcon(file: VirtualFile, flags: Int, project: Project?): Icon? {
+        val isExpanded = flags and MaterialIconFlags.ICON_FLAG_OPEN != 0
+        val isRoot = project != null && isContentRoot(file, project)
+        val iconId = resolveIconId(
+            fileName = file.name,
+            isDirectory = file.isDirectory,
+            isExpanded = isExpanded,
+            isRoot = isRoot,
+        )
+        return getIcon(iconId)
+    }
 
     fun resolveIconId(fileName: String, isDirectory: Boolean, isExpanded: Boolean, isRoot: Boolean): String {
         val lowerName = fileName.lowercase()
@@ -42,6 +57,15 @@ internal object MaterialIconRegistry {
             val icon = IconLoader.getIcon(resourcePath, MaterialIconRegistry::class.java)
             normalizeIconSize(icon)
         }
+    }
+
+    private fun isContentRoot(file: VirtualFile, project: Project): Boolean {
+        for (root in ProjectRootManager.getInstance(project).contentRoots) {
+            if (root == file) {
+                return true
+            }
+        }
+        return false
     }
 
     private fun normalizeIconSize(icon: Icon): Icon {
