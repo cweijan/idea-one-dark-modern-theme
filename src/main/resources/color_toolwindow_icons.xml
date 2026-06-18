@@ -116,4 +116,9 @@
     <replacePath path="/icons/expui/toolwindows/toolWindowKubernetes.svg" />
     <replacePath path="/icons/expui/toolwindows/toolWindowKubernetes@20x20.svg" />
   </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_toolWindowChat@20x20.svg">
+    <replacePath path="/icons/toolWindowChat.svg" />
+    <replacePath path="/icons/expui/toolWindowChat@20x20.svg" />
+  </iconReplacement>
 </root>
