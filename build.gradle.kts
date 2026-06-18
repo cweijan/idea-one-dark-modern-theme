@@ -46,10 +46,10 @@ intellijPlatform {
 
 tasks {
     processResources {
-        from("icons") {
+        from("assets/icons") {
             into("icons")
         }
-        from("material-icons.json")
+        from("assets/material-icons.json")
     }
 
     // Set the JVM compatibility versions
