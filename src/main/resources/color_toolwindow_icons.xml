@@ -11,8 +11,11 @@
   <iconReplacement icon="/color-icons/tci_terminal.svg">
     <replacePath path="/toolwindows/toolWindowTerminal.svg"/>
     <replacePath path="/icons/expui/toolwindows/toolWindowTerminal.svg"/>
-    <replacePath path="/icons/expui/toolwindows/toolWindowTerminal@20x20.svg"/>
     <replacePath path="/icons/expui/toolwindow/terminal.svg"/>
+  </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_terminal@20x20.svg">
+    <replacePath path="/icons/expui/toolwindows/toolWindowTerminal@20x20.svg"/>
     <replacePath path="/icons/expui/toolwindow/terminal@20x20.svg"/>
   </iconReplacement>
 

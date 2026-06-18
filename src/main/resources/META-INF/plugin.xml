@@ -1,33 +1,25 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>github.cweijan.material-icons</id>
+     <id>github.cweijan.material-icons</id>
+     <name>Material-icons</name>
+     <vendor url="https://github.com/cweijan">cweijan</vendor>
 
-    <!-- Public plugin name should be written in Title Case
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Material-icons</name>
+     <description>
+          <![CDATA[Material Icon Theme for JetBrains IDEs.<br>Replaces project view file and folder icons using the VSCode Material Icon Theme configuration.<br>Applies colorful icons to tool windows in the IDE sidebar.]]>
+     </description>
 
-    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://www.yourcompany.com">YourCompany</vendor>
+     <depends>com.intellij.modules.platform</depends>
 
-    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
-         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description><![CDATA[
-    Material Icon Theme for JetBrains IDEs.<br>
-    Replaces project view file and folder icons using the VSCode Material Icon Theme configuration.<br>
-    Applies colorful icons to tool windows in the IDE sidebar.
-  ]]></description>
+     <extensions defaultExtensionNs="com.intellij">
+          <fileIconProvider implementation="github.cweijan.materialicons.MaterialFileIconProvider" order="first" />
+          <projectViewNodeDecorator implementation="github.cweijan.materialicons.MaterialProjectViewDecorator"
+               order="last" />
+          <postStartupActivity
+               implementation="github.cweijan.materialicons.toolwindow.ColorToolWindowIconPatcherActivity" />
+     </extensions>
 
-    <!-- Product and plugin compatibility requirements.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
-    <depends>com.intellij.modules.platform</depends>
+     <applicationListeners>
+          <listener class="github.cweijan.materialicons.toolwindow.ColorToolWindowAppLifecycleListener"
+               topic="com.intellij.ide.AppLifecycleListener" />
+     </applicationListeners>
 
-    <!-- Extension points defined by the plugin.
-         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
-    <extensions defaultExtensionNs="com.intellij">
-        <fileIconProvider implementation="github.cweijan.materialicons.MaterialFileIconProvider" order="first"/>
-        <projectViewNodeDecorator implementation="github.cweijan.materialicons.MaterialProjectViewDecorator" order="last"/>
-
-        <postStartupActivity implementation="github.cweijan.materialicons.toolwindow.ColorToolWindowIconPatcherActivity"/>
-    </extensions>
 </idea-plugin>
