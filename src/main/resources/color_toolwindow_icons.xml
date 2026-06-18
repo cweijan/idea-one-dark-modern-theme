@@ -84,4 +84,20 @@
     <replacePath path="/icons/expui/toolwindows/toolWindowStructure.svg" />
     <replacePath path="/icons/expui/toolwindows/toolWindowStructure@20x20.svg" />
   </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_toolWindowRun@20x20.svg">
+    <replacePath path="/toolwindows/toolWindowRun.svg" />
+    <replacePath path="/icons/expui/toolwindows/run.svg" />
+    <replacePath path="/icons/expui/toolwindows/run@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowRun.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowRun@20x20.svg" />
+  </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_toolWindowDebugger@20x20.svg">
+    <replacePath path="/toolwindows/toolWindowDebugger.svg" />
+    <replacePath path="/icons/expui/toolwindows/debug.svg" />
+    <replacePath path="/icons/expui/toolwindows/debug@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowDebugger.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowDebugger@20x20.svg" />
+  </iconReplacement>
 </root>
