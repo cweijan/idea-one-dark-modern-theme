@@ -50,6 +50,9 @@ tasks {
             into("icons")
         }
         from("assets/material-icons.json")
+        from("assets/color-icons") {
+            into("color-icons")
+        }
     }
 
     // Set the JVM compatibility versions
