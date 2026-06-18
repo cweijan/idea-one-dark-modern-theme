@@ -1,48 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
   <iconReplacement icon="/color-icons/tci_commit.svg">
-    <replacePath path="/toolwindows/toolWindowCommit.svg"/>
-    <replacePath path="/icons/expui/toolwindows/commit.svg"/>
-    <replacePath path="/icons/expui/toolwindows/commit@20x20.svg"/>
-    <replacePath path="/icons/expui/toolwindows/toolWindowCommit.svg"/>
-    <replacePath path="/icons/expui/toolwindows/toolWindowCommit@20x20.svg"/>
+    <replacePath path="/toolwindows/toolWindowCommit.svg" />
+    <replacePath path="/icons/expui/toolwindows/commit.svg" />
+    <replacePath path="/icons/expui/toolwindows/commit@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowCommit.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowCommit@20x20.svg" />
   </iconReplacement>
 
   <iconReplacement icon="/color-icons/tci_terminal.svg">
-    <replacePath path="/toolwindows/toolWindowTerminal.svg"/>
-    <replacePath path="/icons/expui/toolwindows/toolWindowTerminal.svg"/>
-    <replacePath path="/icons/expui/toolwindow/terminal.svg"/>
+    <replacePath path="/toolwindows/toolWindowTerminal.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowTerminal.svg" />
+    <replacePath path="/icons/expui/toolwindow/terminal.svg" />
   </iconReplacement>
 
   <iconReplacement icon="/color-icons/tci_terminal@20x20.svg">
-    <replacePath path="/icons/expui/toolwindows/toolWindowTerminal@20x20.svg"/>
-    <replacePath path="/icons/expui/toolwindow/terminal@20x20.svg"/>
+    <replacePath path="/icons/expui/toolwindows/toolWindowTerminal@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindow/terminal@20x20.svg" />
   </iconReplacement>
 
   <iconReplacement icon="/color-icons/tci_toolWindowGradle.svg">
-    <replacePath path="/toolwindows/toolWindowGradle.svg"/>
-    <replacePath path="/icons/toolWindowGradle.svg"/>
-    <replacePath path="/icons/expui/toolwindows/gradle.svg"/>
-    <replacePath path="/icons/expui/toolwindows/gradle@20x20.svg"/>
-    <replacePath path="/icons/expui/toolwindows/toolWindowGradle.svg"/>
-    <replacePath path="/icons/expui/toolwindows/toolWindowGradle@20x20.svg"/>
+    <replacePath path="/toolwindows/toolWindowGradle.svg" />
+    <replacePath path="/icons/toolWindowGradle.svg" />
+    <replacePath path="/icons/expui/toolwindows/gradle.svg" />
+    <replacePath path="/icons/expui/toolwindows/gradle@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowGradle.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowGradle@20x20.svg" />
   </iconReplacement>
 
   <iconReplacement icon="/color-icons/tci_toolWindowDatabase@20x20.svg">
-    <replacePath path="/icons/toolWindowDatabase.svg"/>
-    <replacePath path="/toolwindows/toolWindowDatabase.svg"/>
-    <replacePath path="/icons/expui/toolwindows/database.svg"/>
-    <replacePath path="/icons/expui/toolwindows/database@20x20.svg"/>
-    <replacePath path="/icons/expui/toolwindows/toolWindowDatabase.svg"/>
-    <replacePath path="/icons/expui/toolwindows/toolWindowDatabase@20x20.svg"/>
+    <replacePath path="/icons/toolWindowDatabase.svg" />
+    <replacePath path="/toolwindows/toolWindowDatabase.svg" />
+    <replacePath path="/icons/expui/toolwindows/database.svg" />
+    <replacePath path="/icons/expui/toolwindows/database@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowDatabase.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowDatabase@20x20.svg" />
+  </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_notificationsNew__1.svg">
+    <replacePath path="/toolwindows/notifications.svg" />
+    <replacePath path="/ide/notifications.svg" />
+    <replacePath path="/icons/expui/toolwindows/notifications.svg" />
+    <replacePath path="/icons/expui/toolwindows/notifications@20x20.svg" />
+    <replacePath path="/icons/notifications/notifications.svg" />
+    <replacePath path="/icons/expui/notifications/notifications.svg" />
+    <replacePath path="/icons/expui/notifications/notifications@20x20.svg" />
   </iconReplacement>
 
   <iconReplacement icon="/color-icons/tci_notificationsNew.svg">
-    <replacePath path="/toolwindows/notificationsNew.svg"/>
-    <replacePath path="/toolwindows/notificationsNewImportant.svg"/>
-    <replacePath path="/toolwindows/notifications.svg"/>
-    <replacePath path="/icons/expui/toolwindows/notifications.svg"/>
-    <replacePath path="/icons/expui/toolwindows/notifications@20x20.svg"/>
-    <replacePath path="/ide/notifications.svg"/>
+    <replacePath path="/toolwindows/notificationsNew.svg" />
+    <replacePath path="/icons/notifications/notificationsNew.svg" />
+    <replacePath path="/icons/expui/notifications/notificationsNew.svg" />
+    <replacePath path="/icons/expui/notifications/notificationsNew@20x20.svg" />
+  </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_notificationsNewImportant__1.svg">
+    <replacePath path="/icons/notifications/notificationsImportant.svg" />
+    <replacePath path="/icons/expui/notifications/notificationsImportant.svg" />
+    <replacePath path="/icons/expui/notifications/notificationsImportant@20x20.svg" />
+  </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_notificationsNewImportant.svg">
+    <replacePath path="/toolwindows/notificationsNewImportant.svg" />
+    <replacePath path="/icons/notifications/notificationsNewImportant.svg" />
+    <replacePath path="/icons/expui/notifications/notificationsNewImportant.svg" />
+    <replacePath path="/icons/expui/notifications/notificationsNewImportant@20x20.svg" />
+  </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_toolWindowProject_.svg">
+    <replacePath path="/toolwindows/toolWindowProject.svg" />
+    <replacePath path="/icons/toolWindowProject.svg" />
+    <replacePath path="/icons/expui/toolwindows/project.svg" />
+    <replacePath path="/icons/expui/toolwindows/project@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowProject.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowProject@20x20.svg" />
+  </iconReplacement>
+
+  <iconReplacement icon="/color-icons/tci_toolWindowStructure@20x20.svg">
+    <replacePath path="/toolwindows/toolWindowStructure.svg" />
+    <replacePath path="/icons/toolWindowStructure.svg" />
+    <replacePath path="/icons/expui/toolwindows/structure.svg" />
+    <replacePath path="/icons/expui/toolwindows/structure@20x20.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowStructure.svg" />
+    <replacePath path="/icons/expui/toolwindows/toolWindowStructure@20x20.svg" />
   </iconReplacement>
 </root>
