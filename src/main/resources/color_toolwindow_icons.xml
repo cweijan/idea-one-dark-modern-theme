@@ -68,11 +68,8 @@
   </iconReplacement>
 
   <iconReplacement icon="/color-icons/tci_toolWindowKubernetes@20x20.svg">
+    <replacePath path="/icons/toolWindowKubernetes.svg" />
     <replacePath path="/toolwindows/toolWindowKubernetes.svg" />
-    <replacePath path="/icons/expui/toolwindows/kubernetes.svg" />
-    <replacePath path="/icons/expui/toolwindows/kubernetes@20x20.svg" />
-    <replacePath path="/icons/expui/toolwindows/toolWindowKubernetes.svg" />
-    <replacePath path="/icons/expui/toolwindows/toolWindowKubernetes@20x20.svg" />
   </iconReplacement>
 
   <iconReplacement icon="/color-icons/tci_toolWindowChat@20x20.svg">
