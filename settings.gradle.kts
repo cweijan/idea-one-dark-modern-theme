@@ -1,1 +1,1 @@
-rootProject.name = "material-icons"
+rootProject.name = "one-dark-modern-theme"

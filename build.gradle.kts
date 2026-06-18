@@ -11,7 +11,7 @@ java {
 }
 
 group = "github.cweijan"
-version = "1.0.0"
+version = "2.0.1"
 
 repositories {
     mavenCentral()
@@ -39,7 +39,7 @@ intellijPlatform {
         }
 
         changeNotes = """
-      Initial version
+      One Dark Modern UI theme and editor scheme, with Material Icon Theme file icons and colorful tool window icons.
     """.trimIndent()
     }
 }

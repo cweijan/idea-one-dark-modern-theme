@@ -1,12 +1,14 @@
-# Material Icons
+# One Dark Modern Theme
 
-A JetBrains IDE plugin that brings the [Material Icon Theme](https://github.com/material-extensions/vscode-material-icon-theme) experience to IntelliJ-based products. It replaces project view file and folder icons and applies colorful icons to tool windows in the IDE sidebar.
+A dark theme plugin for JetBrains IDEs, based on the [One Dark Modern](https://github.com/jdinhlife/vscode-onedark-modern) color palette. It also bundles [Material Icon Theme](https://github.com/material-extensions/vscode-material-icon-theme) file and folder icons, plus colorful tool window icons.
 
 ## Features
 
-- **Project view icons** — File and folder icons are resolved from the Material Icon Theme configuration (`material-icons.json`).
-- **Colorful tool window icons** — Sidebar tool windows (Git, Terminal, Run, Debug, Problems, AI Chat, and more) use custom SVG icons with light/dark theme support.
-- **New UI compatible** — Icon path patching covers both Classic UI and New UI (`expui`) resource paths where applicable.
+- **UI theme** — Dark chrome, tuned buttons (solid secondary + blue primary), popups, tool windows, trees, and lists
+- **Editor scheme** — One Dark syntax colors for code, comments, strings, keywords, diffs, and console output
+- **New UI** — Layout tweaks (tree/list row height, spacing) for IntelliJ Platform 2025.1+
+- **Project view icons** — File and folder icons from Material Icon Theme (`material-icons.json`)
+- **Colorful tool window icons** — Sidebar tool windows (Git, Terminal, Run, Debug, Problems, AI Chat, and more) with light/dark theme support
 
 ## Requirements
 
@@ -32,11 +34,27 @@ A JetBrains IDE plugin that brings the [Material Icon Theme](https://github.com/
 ./gradlew runIde
 ```
 
+## Usage
+
+**Settings → Appearance & Behavior → Appearance & UI → Theme** → choose **One Dark Modern**.
+
+The editor color scheme **One Dark Modern** is applied automatically with the theme. File icons and colorful tool window icons are enabled as soon as the plugin is installed.
+
 ## Development
 
-| Path | Description |
-|------|-------------|
-| `assets/icons/` | File and folder icons bundled into the plugin |
+Palette and UI keys are maintained in `scripts/update-theme.js`. After editing colors there, regenerate theme assets:
+
+```bash
+node scripts/update-theme.js
+```
+
+| Path | Purpose |
+|------|---------|
+| `src/main/resources/theme/one_dark_modern.theme.json` | UI theme definition |
+| `src/main/resources/theme/one_dark_modern.xml` | Editor color scheme |
+| `src/main/resources/META-INF/plugin.xml` | Plugin descriptor |
+| `scripts/update-theme.js` | Palette sync script |
+| `assets/icons/` | File and folder icons |
 | `assets/material-icons.json` | Icon association rules from Material Icon Theme |
 | `assets/color-icons/` | Colorful SVG icons for tool windows |
 | `src/main/resources/color_toolwindow_icons.xml` | Maps IDE icon paths to colorful replacements |
@@ -59,13 +77,9 @@ A JetBrains IDE plugin that brings the [Material Icon Theme](https://github.com/
 
 Dark theme icons are resolved automatically: for `your-icon.svg`, the patcher looks for `your-icon_dark.svg`.
 
-## How it works
-
-- **File icons** — `MaterialFileIconProvider` and `MaterialProjectViewDecorator` resolve icons using `material-icons.json`.
-- **Tool window icons** — `ColorToolWindowIconsPatcher` is installed early via `AppLifecycleListener` and refreshes icons when a project opens or the look-and-feel changes.
-
 ## Credits
 
+- UI theme and editor scheme are based on the [One Dark Modern](https://github.com/jdinhlife/vscode-onedark-modern) color palette.
 - File icon associations and artwork are based on the [VSCode Material Icon Theme](https://github.com/material-extensions/vscode-material-icon-theme) project.
 - Tool window colorful icons are inspired by community plugins such as Extra ToolWindow Colorful Icons.
 
