@@ -25,6 +25,7 @@ class MaterialProjectViewDecorator : ProjectViewNodeDecorator {
             isExpanded = false,
             isRoot = false,
         )
+        if (iconId == null) return
         val icon = MaterialIconRegistry.getIcon(iconId) ?: return
         data.setIcon(icon)
     }

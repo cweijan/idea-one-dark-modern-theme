@@ -13,7 +13,7 @@ internal object MaterialIconRegistry {
 
     private const val TREE_ICON_SIZE = 16
 
-    fun resolveIconId(fileName: String, isDirectory: Boolean, isExpanded: Boolean, isRoot: Boolean): String {
+    fun resolveIconId(fileName: String, isDirectory: Boolean, isExpanded: Boolean, isRoot: Boolean): String? {
         val lowerName = fileName.lowercase()
 
         if (isDirectory) {
@@ -33,7 +33,7 @@ internal object MaterialIconRegistry {
             theme.fileExtensions[candidate]?.let { return it }
         }
 
-        return theme.defaultFileIcon
+        return null
     }
 
     fun getIcon(iconId: String): Icon? {

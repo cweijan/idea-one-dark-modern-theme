@@ -2353,6 +2353,7 @@
   },
   "fileExtensions": {
     "htm": "html",
+    "html": "html",
     "xhtml": "html",
     "html_vm": "html",
     "asp": "html",
@@ -2436,6 +2437,7 @@
     "sln.dotsettings.user": "settings",
     "cfg": "settings",
     "ts": "typescript",
+    "mts": "typescript",
     "d.ts": "typescript-def",
     "pdf": "pdf",
     "xlsx": "table",

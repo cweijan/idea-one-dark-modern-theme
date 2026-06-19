@@ -21,7 +21,7 @@ class MaterialFileIconProvider : FileIconProvider {
             isDirectory = file.isDirectory,
             isExpanded = isExpanded,
             isRoot = isRoot,
-        )
+        ) ?: return null
 
         return MaterialIconRegistry.getIcon(iconId)
     }
