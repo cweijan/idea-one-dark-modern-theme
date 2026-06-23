@@ -361,7 +361,10 @@
       "iconPath": "./../icons/database.svg"
     },
     "kusto": {
-      "iconPath": "./../icons/kusto.svg"
+      "iconPath": "./../icons/kusto_logo_dark.png"
+    },
+    "kusto_light": {
+      "iconPath": "./../icons/kusto_logo.png"
     },
     "lock": {
       "iconPath": "./../icons/lock.svg"
@@ -3768,20 +3771,8 @@
     "ico": {
       "iconPath": "./../icons/ico.svg"
     },
-    "psd": {
-      "iconPath": "./../icons/psd.svg"
-    },
     "heic": {
       "iconPath": "./../icons/heic.svg"
-    },
-    "7z": {
-      "iconPath": "./../icons/7z.svg"
-    },
-    "tar": {
-      "iconPath": "./../icons/tar.svg"
-    },
-    "gz": {
-      "iconPath": "./../icons/gz.svg"
     }
   },
   "folderNames": {
@@ -13228,7 +13219,7 @@
     "xoml": "xml",
     "xpdl": "xml",
     "xul": "xml",
-    "toml": "settings",
+    "toml": "toml",
     "toon": "toon",
     "png": "image",
     "jpeg": "image",
@@ -13455,8 +13446,8 @@
     "qs": "qsharp",
     "zip": "zip",
     "z": "zip",
-    "tar": "tar",
-    "gz": "gz",
+    "tar": "zip",
+    "gz": "zip",
     "xz": "zip",
     "lz": "zip",
     "liz": "zip",
@@ -13469,9 +13460,9 @@
     "br": "zip",
     "bz2": "zip",
     "bzip2": "zip",
-    "gzip": "gz",
+    "gzip": "zip",
     "brotli": "zip",
-    "7z": "7z",
+    "7z": "zip",
     "001": "zip",
     "rar": "zip",
     "far": "zip",
@@ -13479,7 +13470,7 @@
     "taz": "zip",
     "tlz": "zip",
     "txz": "zip",
-    "tgz": "gz",
+    "tgz": "zip",
     "tpz": "zip",
     "tbz": "zip",
     "tbz2": "zip",
@@ -13513,7 +13504,7 @@
     "jsp": "java",
     "jav": "java",
     "jar": "java",
-    "class": "java",
+    "class": "javaclass",
     "c3": "c3",
     "c": "c",
     "i": "c",
@@ -14159,10 +14150,10 @@
     "x_b": "3d",
     "x_t": "3d",
     "123dx": "3d",
-    "svg": "svg",
+    "svg": "ico",
     "ai": "adobe-illustrator",
     "ait": "adobe-illustrator",
-    "psd": "psd",
+    "psd": "adobe-photoshop",
     "psb": "adobe-photoshop",
     "psdt": "adobe-photoshop",
     "svelte": "svelte",
@@ -14617,7 +14608,7 @@
     "copyright.md": "license",
     "copyright.rst": "license",
     "copyright.txt": "license",
-    "license": "certificate",
+    "license": "license",
     "license-agpl": "license",
     "license-apache": "license",
     "license-bsd": "license",
@@ -16634,7 +16625,7 @@
     "ini": "settings",
     "properties": "settings",
     "spring-boot-properties": "settings",
-    "toml": "settings",
+    "toml": "toml",
     "diff": "diff",
     "json": "json",
     "jsonl": "json",
@@ -16768,7 +16759,7 @@
     "sql": "database",
     "kql": "kusto",
     "ssh_config": "lock",
-    "svg": "svg",
+    "svg": "ico",
     "swift": "swift",
     "typescriptreact": "react_ts",
     "search-result": "search",
@@ -16821,6 +16812,7 @@
   },
   "light": {
     "fileExtensions": {
+      "kql": "kusto_light",
       "blink": "blink_light",
       "jinja": "jinja_light",
       "jinja2": "jinja_light",
@@ -17035,6 +17027,7 @@
       ".easignore": "expo_light"
     },
     "languageIds": {
+      "kql": "kusto_light",
       "toml": "toml_light",
       "systemd-conf": "systemd_light",
       "systemd-unit-file": "systemd_light"
