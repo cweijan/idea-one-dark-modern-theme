@@ -361,10 +361,10 @@
       "iconPath": "./../icons/database.svg"
     },
     "kusto": {
-      "iconPath": "./../icons/kusto_logo_dark.png"
+      "iconPath": "./../icons/kusto.svg"
     },
     "kusto_light": {
-      "iconPath": "./../icons/kusto_logo.png"
+      "iconPath": "./../icons/kusto.svg"
     },
     "lock": {
       "iconPath": "./../icons/lock.svg"
@@ -14615,10 +14615,10 @@
     "license-mit": "license",
     "license-gpl": "license",
     "license-lgpl": "license",
-    "license.md": "certificate",
+    "license.md": "license",
     "license.rst": "license",
-    "license.txt": "certificate",
-    "licence": "certificate",
+    "license.txt": "license",
+    "licence": "license",
     "licence-agpl": "license",
     "licence-apache": "license",
     "licence-bsd": "license",
