@@ -191,7 +191,7 @@
       "inactiveMaskColor": "chrome",
       "underlineColor": "#528bff",
       "underlineHeight": 2,
-      "borderColor": "chrome",
+      "borderColor": "#2e323a",
       "hoverBackground": "#21252b00",
       "hoverInactiveBackground": "#21252b00"
     },
