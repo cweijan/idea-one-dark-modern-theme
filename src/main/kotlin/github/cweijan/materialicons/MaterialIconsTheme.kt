@@ -1,7 +1,9 @@
 package github.cweijan.materialicons
 
-import com.fasterxml.jackson.databind.JsonNode
-import com.fasterxml.jackson.databind.ObjectMapper
+import com.google.gson.JsonElement
+import com.google.gson.JsonObject
+import com.google.gson.JsonParser
+import com.google.gson.JsonPrimitive
 
 internal data class MaterialIconsTheme(
     val iconDefinitions: Map<String, String>,
@@ -20,12 +22,10 @@ internal data class MaterialIconsTheme(
     val defaultRootFolderExpandedIcon: String,
 ) {
     companion object {
-        private val mapper = ObjectMapper()
-
         fun load(): MaterialIconsTheme {
             val stream = MaterialIconsTheme::class.java.getResourceAsStream("/material-icons.json")
                 ?: error("material-icons.json not found in plugin resources")
-            val root = mapper.readTree(stream)
+            val root = stream.reader().use { JsonParser.parseReader(it) }
 
             return MaterialIconsTheme(
                 iconDefinitions = parseIconDefinitions(root.path("iconDefinitions")),
@@ -45,28 +45,42 @@ internal data class MaterialIconsTheme(
             )
         }
 
-        private fun parseIconDefinitions(node: JsonNode): Map<String, String> {
+        private fun parseIconDefinitions(node: JsonElement?): Map<String, String> {
             val result = LinkedHashMap<String, String>()
-            if (!node.isObject) {
+            if (node !is JsonObject) {
                 return result
             }
-            for (entry in node.properties()) {
+            for (entry in node.entrySet()) {
                 val iconPath = entry.value.path("iconPath").asText()
                 result[entry.key] = normalizeIconPath(iconPath)
             }
             return result
         }
 
-        private fun parseStringMap(node: JsonNode): Map<String, String> {
+        private fun parseStringMap(node: JsonElement?): Map<String, String> {
             val result = LinkedHashMap<String, String>()
-            if (!node.isObject) {
+            if (node !is JsonObject) {
                 return result
             }
-            for (entry in node.properties()) {
+            for (entry in node.entrySet()) {
                 result[entry.key.lowercase()] = entry.value.asText()
             }
             return result
         }
+
+        // Missing values are represented as null, like Jackson's JsonNode.path().
+        private fun JsonElement?.path(name: String): JsonElement? = (this as? JsonObject)?.get(name)
+
+        // Same results as Jackson's JsonNode.asText(): "" for missing values and objects, "null" for JSON null.
+        private fun JsonElement?.asText(): String = when {
+            this is JsonPrimitive -> asString
+            this != null && isJsonNull -> "null"
+            else -> ""
+        }
+
+        // Same results as Jackson's JsonNode.asText(defaultValue): the default replaces missing and null values.
+        private fun JsonElement?.asText(defaultValue: String): String =
+            if (this == null || isJsonNull) defaultValue else asText()
 
         private fun normalizeIconPath(iconPath: String): String {
             val fileName = iconPath.substringAfterLast('/')
